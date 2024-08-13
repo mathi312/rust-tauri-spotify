@@ -1,0 +1,50 @@
+<section class="sidebar">
+    <ul class="sidebar-list">
+        <li class="sidbar-item">
+            <button (click)="onDropdown()" class="sidebar-text sidebar-button" >
+                <img src="/assets/playlist.svg" class="sidebar-image">
+                <p>Playlists</p>
+                <img *ngIf="!dropdown" class="sidebar-dropdown" src="/assets/top.svg" >
+                <img *ngIf="dropdown" class="sidebar-dropdown" src="/assets/bottom.svg" >
+            </button>
+            <ul *ngIf="dropdown" class="dropdown-list">
+                <li *ngFor="let playlist of playlists">
+                    <a href="#" class="dropdown-item">
+                        <img class="dropdown-image" src="/assets/playlist_small.svg">
+                        <p class="dropdown-text"> {{ playlist.title }}</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="sidbar-item">
+            <a class="sidebar-text" href="#">
+                <img src="/assets/liked.svg" class="sidebar-image">
+                <p>Liked Songs</p>
+            </a>
+        </li>
+        <li class="sidbar-item">
+            <a class="sidebar-text" href="#">
+                <img src="/assets/saves.svg" class="sidebar-image">
+                <p>Saves</p>
+            </a>
+        </li>
+        <li class="sidbar-item">
+            <a class="sidebar-text" href="#">
+                <img src="/assets/album.svg" class="sidebar-image">
+                <p>Albums</p>
+            </a>
+        </li>
+        <li class="sidbar-item">
+            <a class="sidebar-text" href="#">
+                <img src="/assets/folder.svg" class="sidebar-image">
+                <p>Folders</p>
+            </a>
+        </li>
+        <li class="sidbar-item">
+            <a class="sidebar-text" href="#">
+                <img src="/assets/artist.svg" class="sidebar-image">
+                <p>Artists</p>
+            </a>
+        </li>
+    </ul>
+</section>
