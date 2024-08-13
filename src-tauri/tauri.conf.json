@@ -20,17 +20,21 @@
     "windows": [
       {
         "title": "rust-tauri-spotify",
-        "width": 800,
-        "height": 600
+        "width": 1080,
+        "height": 700
       }
     ],
+    "systemTray": {
+      "iconPath": "icons/Square71x71Logo.png",
+      "iconAsTemplate": true
+    },
     "security": {
       "csp": null
     },
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "spotify.mathi",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

@@ -1,0 +1,21 @@
+<section class="menu">
+    <a (click)="onLibrary()" href="#" class="menu-library">
+        <img [hidden]="libraryActive" src="/assets/library.svg" class="library-image" style="width: 42px;height: 46px;">
+        <img [hidden]="!libraryActive" src="/assets/library_filled.svg" class="library-image" style="width: 42px;height: 46px;">
+        <p class="library-text">My Library</p>
+    </a>
+    <div class="menu-home">
+        <button (click)="onHome()" [ngClass]="{'home-active': homeActive}" class="home-button">
+            <img [hidden]="homeActive" src="/assets/home.svg" class="home-image" style="width: 42px;height: 46px;">
+            <img [hidden]="!homeActive" src="/assets/home_filled.svg" class="home-image" style="width: 42px;height: 46px;">
+            <p class="button-text">Home</p>
+        </button>
+    </div>
+    <div>
+        <a>
+            <input placeholder="Search..">
+            <img >
+            <img >
+        </a>
+    </div>
+</section>
