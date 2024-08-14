@@ -4,11 +4,12 @@ import { RouterOutlet } from "@angular/router";
 import { invoke } from "@tauri-apps/api/tauri";
 import { Sidebar } from "./sidebar/sidebar";
 import { Menu } from "./menu/menu";
+import { Player } from "./player/player";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, RouterOutlet, Sidebar, Menu],
+  imports: [CommonModule, RouterOutlet, Sidebar, Menu, Player],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })

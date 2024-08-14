@@ -1,0 +1,51 @@
+<section class="player">
+    <div class="music-player">
+        <!-- control buttons -->
+        <div class="controls">
+            <button (click)="onPlay()" class="play-button">
+                <img [hidden]="!isPlaying" src="/assets/paused.svg" class="play-image" style="width: 42px;height: 42px;">
+                <img [hidden]="isPlaying" src="/assets/playing.svg" class="play-image" style="width: 42px;height: 42px;">
+            </button>
+            <button (click)="onLast()" class="control-button">
+                <img src="/assets/last.svg" class="button-image">
+            </button>
+            <button (click)="onNext()" class="control-button">
+                <img src="/assets/next.svg" class="button-image">
+            </button>
+            <button (click)="onShuffle()" class="control-button">
+                <img [hidden]="isShuffle" src="/assets/shuffle_off.svg" class="button-image">
+                <img [hidden]="!isShuffle" src="/assets/shuffle_on.svg" class="button-image">
+            </button>
+            <button (click)="onLoop()" class="control-button">
+                <img *ngIf="!isLoop && !isLoopOne" src="/assets/loop_off.svg" class="button-image" style="width: 42px;height: 42px;">
+                <img *ngIf="isLoop && !isLoopOne" src="/assets/loop_on.svg" class="button-image" style="width: 42px;height: 42px;">
+                <img *ngIf="isLoop && isLoopOne" src="/assets/loop_one.svg" class="button-image" style="width: 42px;height: 42px;">
+            </button>
+        </div>
+        <!-- progress bar -->
+        <div class="progress-container">
+            <div class="time">{{ currentTrackTime }}</div>
+            <input type="range" min="0%" value="trackPercent" class="progress-bar" />
+            <div class="time">{{ trackLenght }}</div>
+        </div>
+
+        <div class="track-info">
+            <img src="album-cover.png" alt="Album Cover" class="album-cover">
+            <div class="track-details">
+                <div class="track-title">Get Lucky</div>
+                <div class="track-artist">Daft Punk</div>
+                <div class="track-album">Random Access Memories</div>
+            </div>
+        </div>
+
+
+
+        <div class="actions">
+            <button class="favorite"></button>
+            <button class="queue"></button>
+            <button class="devices"></button>
+            <button class="volume"></button>
+            <button class="more"></button>
+        </div>
+    </div>
+</section>
