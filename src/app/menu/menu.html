@@ -11,11 +11,30 @@
             <p class="button-text">Home</p>
         </button>
     </div>
-    <div>
+    <div class="menu-search">
         <a>
             <input placeholder="Search..">
             <img >
             <img >
         </a>
+    </div>
+
+    <!-- tauri titlebar: minimize, maximize, close-->
+    <div data-tauri-drag-region class="titlebar">
+      <div (click)="onMinimize()" class="minimze" id="titlebar-minimize">
+        <img
+          src="https://api.iconify.design/mdi:window-minimize.svg?color=white"
+          alt="minimize"
+        />
+      </div>
+      <div (click)="onMaximize()" class="maximize" id="titlebar-maximize">
+        <img
+          src="https://api.iconify.design/mdi:window-maximize.svg?color=white"
+          alt="maximize"
+        />
+      </div>
+      <div (click)="onClose()" class="close" id="titlebar-close">
+        <img src="https://api.iconify.design/mdi:close.svg?color=white" alt="close" />
+      </div>
     </div>
 </section>

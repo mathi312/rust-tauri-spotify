@@ -18,6 +18,8 @@ export class Player {
   public currentTrackTime: string = "0:00";
   public trackPercent: string = "0%";
 
+  public song: Song = new Song("Would that I", "Hozier", "test");
+
   onPlay() {
     if (this.isPlaying) {
       this.isPlaying = false;
@@ -52,5 +54,17 @@ export class Player {
       // first click
       this.isLoop = true;
     }
+  }
+}
+
+export class Song {
+  public title: string;
+  public artist: string;
+  public album: string;
+
+  constructor(title: string, artist: string, album: string) {
+    this.title = title;
+    this.artist = artist;
+    this.album = album;
   }
 }

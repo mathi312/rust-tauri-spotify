@@ -81,4 +81,39 @@
 }
 
 .menu-search {
+    margin-top: 30px;
+}
+
+.titlebar {
+    width: calc(100vw - 16rem - 210px - 220px);
+    display: flex;
+    height: 50px;
+    background: #000;
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.minimze,
+.maximize,
+.close {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.maximize:hover,
+.minimze:hover {
+    cursor: pointer;
+    background: #e0e0e0;
+}
+
+.close:hover {
+    cursor: pointer;
+    background: #ff4d4d;
 }

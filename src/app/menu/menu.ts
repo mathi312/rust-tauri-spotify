@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { appWindow } from "@tauri-apps/api/window";
 
 @Component({
   selector: "menu",
@@ -26,5 +27,17 @@ export class Menu {
     } else {
       this.homeActive = true;
     }
+  }
+
+  onMinimize() {
+    appWindow.minimize();
+  }
+
+  onMaximize() {
+    appWindow.toggleMaximize();
+  }
+
+  onClose() {
+    appWindow.close();
   }
 }

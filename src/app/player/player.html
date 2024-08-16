@@ -28,24 +28,32 @@
             <input type="range" min="0%" value="trackPercent" class="progress-bar" />
             <div class="time">{{ trackLenght }}</div>
         </div>
-
+        <!-- song info -->
         <div class="track-info">
-            <img src="album-cover.png" alt="Album Cover" class="album-cover">
+            <button class="actions-button">
+                <img src="/assets/volume.svg" class="button-image" style="width: 42px;height: 42px;" >
+            </button>
+            <img alt="Song Cover" class="album-cover">
             <div class="track-details">
-                <div class="track-title">Get Lucky</div>
-                <div class="track-artist">Daft Punk</div>
-                <div class="track-album">Random Access Memories</div>
+                <div class="track-title">{{ song.title }}</div>
+                <div class="track-artist">{{ song.artist }}</div>
+                <div class="track-album">{{ song.album }}</div>
             </div>
         </div>
 
-
-
         <div class="actions">
-            <button class="favorite"></button>
-            <button class="queue"></button>
-            <button class="devices"></button>
-            <button class="volume"></button>
-            <button class="more"></button>
+            <button class="actions-button">
+                <img src="/assets/like.svg" class="button-image" style="width: 42px;height: 42px;" >
+            </button>
+            <button class="actions-button">
+                <img src="/assets/playlist_add.svg" class="button-image" style="width: 42px;height: 42px;" >
+            </button>
+            <button class="actions-button">
+                <img src="/assets/lyrics.svg" class="button-image" style="width: 42px;height: 42px;" >
+            </button>
+            <button class="actions-button">
+                <img src="/assets/more.svg" class="button-image" style="width: 42px;height: 42px;" >
+            </button>
         </div>
     </div>
 </section>
