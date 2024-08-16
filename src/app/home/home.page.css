@@ -1,0 +1,58 @@
+.container {
+    background-color: #000;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #202020;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.playlist-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.playlist-container::-webkit-scrollbar {
+    display: none;
+}
+
+.playlist-container {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.playlist-item {
+    width: 150px;
+    height: 150px;
+    background-color: #282828;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.playlist-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.playlist-item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
